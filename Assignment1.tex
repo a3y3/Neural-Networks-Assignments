@@ -20,9 +20,9 @@ By turning in this assignment, I agree by the academic honor code and declare th
 
 \begin{enumerate}
     \item \begin{gather}
-                \phi(v) =  \frac{1}{1+e^{-av}} \nonumber\\ \nonumber\\
-                \frac{d}{dv}\phi(v) = \frac{d}{dv}(\frac{1}{1+e^{-av}})\nonumber\\\nonumber\\
-                \frac{d}{dv}\phi(v) = \frac{ae^{av}}{(1+e^{-av})^2} \label{eqn:1}
+                \phi(a) =  \frac{1}{1+e^{-av}} \nonumber\\ \nonumber\\
+                \frac{d}{dv}\phi(a) = \frac{d}{dv}(\frac{1}{1+e^{-av}})\nonumber\\\nonumber\\
+                \frac{d}{dv}\phi(a) = \frac{ae^{av}}{(1+e^{-av})^2} \label{eqn:1}
             \end{gather}
             \[ 
                 \text{[Substituting\ v = 0]} 
@@ -39,34 +39,40 @@ By turning in this assignment, I agree by the academic honor code and declare th
 \section*{Problem 2}
 
 \begin{enumerate}
-  \item \begin{gather}
-            \phi(v) = \tanh(av) \nonumber \\ \nonumber\\ 
-            \lim_{v\to\infty} \phi(v) = \lim_{v\to\infty}\tanh(av) \label{eqn:2}
+  \item \[
+            \text{In this question, we must vary a and see how the function changes values.}
+        \]
+        \[
+            \text{Hence, a is not a constant anymore. We assume v as constant in this proof.}
+        \]
+        \begin{gather}
+            \therefore\phi(a) = \tanh(av) \nonumber \\ \nonumber\\ 
+            \lim_{a\to\infty} \phi(a) = \lim_{a\to\infty}\tanh(av) \label{eqn:2}
         \end{gather}
         
         \[
-            \text{But\ $tanh(av)$ =$\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}}$} \\  
+            \text{But\ $tanh(av)$ =$\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}}$} \\
         \]
         
         \begin{gather}             
-            \therefore \lim_{v\to\infty} \phi(v) = \lim_{v\to\infty}\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}} \label{eqn:2}    
+            \therefore \lim_{a\to\infty} \phi(a) = \lim_{a\to\infty}\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}} \label{eqn:3}    
         \end{gather}
         \[
-            \text{For $\lim_{v\to\infty}$, take $\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}}$=$\frac{1-e^{-2ah}}{1+e^{-2ah}}$}
-        \]\\
+            \text{For $\lim_{a\to\infty}$, take $\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}}$=$\frac{1-e^{-2ah}}{1+e^{-2ah}}$}
+        \]
         \[
-            \text{And for $\lim_{v\to-\infty}$, take $\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}}$=$\frac{e^{2ah}-1}{e^{2ah}+1}$}
+            \text{And for $\lim_{a\to-\infty}$, take $\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}}$=$\frac{e^{2ah}-1}{e^{2ah}+1}$}
         \]
         
         \[
-            \text{Applying appropriate limits, for $\lim_{v\to\infty}$, we get} 
+            \text{Applying appropriate limits, for $\lim_{a\to\infty}$, we get} 
         \]
         \begin{gather}
             \frac{1-0}{1+0} = 1
         \end{gather}
         
         \[
-            \text{And for $\lim_{v\to-\infty}$, we get} 
+            \text{And for $\lim_{a\to-\infty}$, we get} 
         \]
         \begin{gather}
             \frac{0-1}{0+1} = -1
