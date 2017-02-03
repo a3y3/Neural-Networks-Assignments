@@ -43,8 +43,37 @@ By turning in this assignment, I agree by the academic honor code and declare th
             \phi(v) = \tanh(av) \nonumber \\ \nonumber\\ 
             \lim_{v\to\infty} \phi(v) = \lim_{v\to\infty}\tanh(av) \label{eqn:2}
         \end{gather}
-        \[ 
-                \text{But\ v = 0]} 
+        
+        \[
+            \text{But\ $tanh(av)$ =$\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}}$} \\  
+        \]
+        
+        \begin{gather}             
+            \therefore \lim_{v\to\infty} \phi(v) = \lim_{v\to\infty}\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}} \label{eqn:2}    
+        \end{gather}
+        \[
+            \text{For $\lim_{v\to\infty}$, take $\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}}$=$\frac{1-e^{-2ah}}{1+e^{-2ah}}$}
+        \]\\
+        \[
+            \text{And for $\lim_{v\to-\infty}$, take $\frac{e^{ah}-e^{-ah}}{e^{ah}+e^{-ah}}$=$\frac{e^{2ah}-1}{e^{2ah}+1}$}
+        \]
+        
+        \[
+            \text{Applying appropriate limits, for $\lim_{v\to\infty}$, we get} 
+        \]
+        \begin{gather}
+            \frac{1-0}{1+0} = 1
+        \end{gather}
+        
+        \[
+            \text{And for $\lim_{v\to-\infty}$, we get} 
+        \]
+        \begin{gather}
+            \frac{0-1}{0+1} = -1
+        \end{gather}
+       
+       \[
+            \text{Hence, } 
         \]
 \end{enumerate}
 
