@@ -46,27 +46,23 @@ By turning in this assignment, I agree by the academic honor code and declare th
 \end{gather*}
 
 \section*{Problem 3}
+\begin{gather*}
+    \Delta w_{ji}(n) = \alpha \Delta w_{ji}(n-1) + \eta\delta_j(n)y_i(n)\\\\
+    \text{Put n=2}\\
+\end{gather*}
 \begin{align*}
-    1.\text{Hard Limit}: &y = \begin{cases}
-                            0,  v<0 \\
-                            1,  v>= 0
-                        \end{cases}\\\\
-    2.\text{Symmetrical Hard Limit}: &y = \begin{cases}
-                            -1,  v<0 \\
-                            1,  v>= 0
-                        \end{cases}\\\\ 
-    3.\text{Linear}: &y = v\\\\
-    4.\text{Saturating Linear}: &y = \begin{cases}
-                            0,  v<0 \\
-                            n,  0<=v<1\\
-                            1,  v>1
-                        \end{cases}\\\\
-    5.\text{Log-Sigmoid: }&y =\frac{1}{1+e^{-v}} \\\\
-    6.\text{Positive Linear}: &y = \begin{cases}
-                            1,  v<0 \\
-                            v,  v>= 0
-                        \end{cases}\\\\
+    \Delta w_{ji}(2) &= \alpha \Delta w_{ji}(1) + \eta\delta_j(2)y_i(2)\\\\
+    &=\alpha[\alpha\Delta w_{ji}(0)+\eta\delta_j(1)y_i(1)]+ \eta\delta_j(2)y_i(2)\\\\
+    &=\alpha^2\Delta w_{ji}(0)+\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ \\
+    &=\alpha^2[\alpha\Delta_{ji}(-1)+\eta\delta_j(0)y_i(0)]+\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ \\
+    &=\alpha^2\eta\delta_j(0)y_i(0) +\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ 
 \end{align*}
+\[  
+    \text{The above equation can also be generalized in the following way}\\
+\]
+\begin{gather*}
+    \Delta w_{ji}(n) = \eta\sum_{t=0}^{N}\alpha^{n-t}\delta_j(t)y_i(t)
+\end{gather*}
 
 \section*{Problem 4}
 \begin{gather*}
