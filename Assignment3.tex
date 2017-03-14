@@ -38,53 +38,12 @@ By turning in this assignment, I agree by the academic honor code and declare th
 
 \section*{Problem 2}
 
-\begin{enumerate}
-  \item \[
-            \text{In this question, we must vary a and see how the function changes values.}
-        \]
-        \[
-            \text{Hence, a is not a constant anymore. We assume v as constant in this proof.}
-        \]
-        \begin{gather}
-            \therefore\phi(a) = \tanh(av) \nonumber \\ \nonumber\\ 
-            \lim_{a\to\infty} \phi(a) = \lim_{a\to\infty}\tanh(av) \label{eqn:2}
-        \end{gather}
-        
-        \[
-            \text{But\ $tanh(av)$ =$\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}}$} \\
-        \]
-        
-        \begin{gather}             
-            \therefore \lim_{a\to\infty} \phi(a) = \lim_{a\to\infty}\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}} \label{eqn:3}    
-        \end{gather}
-        \[
-            \text{For $\lim_{a\to\infty}$, take $\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}}$=$\frac{1-e^{-2ah}}{1+e^{-2ah}}$}
-        \]
-        \[
-            \text{And for $\lim_{a\to-\infty}$, take $\frac{e^{av}-e^{-av}}{e^{av}+e^{-av}}$=$\frac{e^{2ah}-1}{e^{2ah}+1}$}
-        \]
-        
-        \[
-            \text{Applying appropriate limits, for $\lim_{a\to\infty}$, we get} 
-        \]
-        \begin{gather}
-            \frac{1-0}{1+0} = 1
-        \end{gather}
-        
-        \[
-            \text{And for $\lim_{a\to-\infty}$, we get} 
-        \]
-        \begin{gather}
-            \frac{0-1}{0+1} = -1
-        \end{gather}
-       
-        \[
-            \text{Hence, we prove that as slope parameter a approaches $\infty$, } 
-        \]
-        \[
-            \text{the function starts acting like a signum function.}
-        \]
-\end{enumerate}
+\begin{gather*}
+  \text{The limitation of the Guass-Newton method is that it follows only a forward pass approach}\\
+  \text{and does not keep updating the synaptic weights. We can implement a backward pass system}\\
+  \text{that keeps updating weights of the current layer with respect to the next layer.}\\
+  \text{A typical example in which this can be implemented is the Back Propagation Algorithm.}
+\end{gather*}
 
 \section*{Problem 3}
 \begin{align*}
