@@ -18,28 +18,36 @@ By turning in this assignment, I agree by the academic honor code and declare th
 
 \section*{Problem 1}
 
-\begin{enumerate}
-    \item \begin{gather}
-                \phi(a) =  \frac{1}{1+e^{-av}} \nonumber\\ \nonumber\\
-                \frac{d}{dv}\phi(a) = \frac{d}{dv}(\frac{1}{1+e^{-av}})\nonumber\\\nonumber\\
-                \frac{d}{dv}\phi(a) = \frac{ae^{av}}{(1+e^{-av})^2} \label{eqn:1}
-            \end{gather}
-            \[ 
-                \text{[Substituting\ v = 0]} 
-            \]
-             
-            \begin{gather}
-                \phi'(v) = \frac{a}{4}
-            \end{gather}  
-               
-
-   
-\end{enumerate}
+\begin{gather*}
+    w(0)=0\\\\
+    N = 2\\\\
+    y(n) = \psi({\sum{w_i*x_i}})\\\\
+    =\psi({1*0.2+1*0.4})\\\\
+    = \frac{1}{1+e^{-0.6}}\\\\
+    =0.645\\\\
+    \text{Now, updation of weight vector is as follows}\\\\
+    w_1(2) = w_1(1) + \eta[d(1)-y(n)]x_1(n)\\\\
+    = 0.2 + 1 * [0.5 - 0.645]*1\\\\
+    =0.055\\\\
+    w_2(2) = w_2(1) + \eta[d(1)-y(1)]x_2(n)\\\\
+    = 0.4 + 1 * [0.5-0.645] * 1\\\\
+    = 0.255\\\\
+    y(3) = \psi({\sum{w_i*x_i}})\\\\
+    =\psi({1*0.055+1*0.255})\\\\
+    = \frac{1}{1+e^{-0.31}}\\\\
+    =0.576\\\\
+    w_1(3) = w_1(2) + \eta[d(1)-y(3)]x_1(3)\\\\
+    = 0.055 + 1 * [0.5 - 0.576]*1\\\\
+    =-0.021\\\\
+    w_2(3) = w_2(2) + \eta[d(1)-y(1)]x_2(3)\\\\
+    = 0.255 + 1 * [0.5-0.576] * 1\\\\
+    = 0.179
+\end{gather*}
 
 \section*{Problem 2}
 
 \begin{gather*}
-  \text{The limitation of the Guass-Newton method is that it follows only a forward pass approach}\\
+  \text{The limitation of the Gauss-Newton method is that it follows only a forward pass approach}\\
   \text{and does not keep updating the synaptic weights. We can implement a backward pass system}\\
   \text{that keeps updating weights of the current layer with respect to the next layer.}\\
   \text{A typical example in which this can be implemented is the Back Propagation Algorithm.}
