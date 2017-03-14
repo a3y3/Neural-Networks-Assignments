@@ -110,32 +110,21 @@ By turning in this assignment, I agree by the academic honor code and declare th
 \end{align*}
 
 \section*{Problem 4}
-\begin{center}
-\text{Starting at the output neurons f and g, we have}\\
-\text{$y_f$=$\phi({\sum{w_{fi}*x_i}}$})\\
-\text{}\\
-\text{and}\\
-\text{}\\
-\text{$y_g$=$\phi({\sum{w_{gi}*x_i}})$}\\
-\text{Now, moving back to the 2nd hidden layer consisting nodes d and e}
-\end{center}
-\begin{enumerate}
-    \item
-        \text{For v = 5.6, y = 1.6.}
-        \text{No function matches for this type of output.}
-    \item
-        \text{For v = 5.6, y = 1.0.}\\
-        \text{This is clearly a Symetric Sigmoid Function. v $>$ 0,y = +1}
-    \item
-        \text{For v = 5.6, y = 0.9963.}\\
-        \text{Here, if we input the value into}
-        \[
-            y =\frac{1}{1+e^{-v}}
-        \]
-        \text{we get the perfect result. Hence, the answer is Log-Sigmoid Function.}
-    \item
-        \text{For v = 5.6, y = -1.0.}\\
-        \text{No function could be found for this type of output.}\\
-\end{enumerate}
-
+\begin{gather}
+    \text{Starting at the output neurons f and g, we have}\\
+    y_f=\phi({\sum{w_{fi}*x_i}}) \\
+    \text{ie. Assuming $x_i$ is output of previous neuron}\\
+    \text{and}\\
+    y_g=\phi({\sum{w_{gi}*x_i}})\\
+    \text{Error $e_j$ is calculated as $d_j-y_j$ respectively, for both of them.}\\
+    \delta_f = e_j*y_j*[1-y_j]\\
+    \Delta w_{fd} = -\eta \delta_f y_d\\
+    \Delta w_{gd} = -\eta \delta_g y_d\\
+    \text{}\\
+    \text{Now, moving back to the 2nd hidden layer consisting nodes d and e}\\
+    \delta_d = y_d*[1-y_d]*\sum{\delta_f*w_fd}\\
+    \text{and}\\
+    \delta_e = y_e*[1-y_e]*\sum{\delta_g*w_gd}\\
+    \\\text{Similarly, the algorithm continues till first input layer.}
+\end{gather}
 \end{document}
