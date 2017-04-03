@@ -25,7 +25,7 @@ By turning in this assignment, I agree by the academic honor code and declare th
     (iii)Let $k(x,x^{'})$ be a continous summetric kernel that is defined in the closed interval \\a $\leq$x$ \leq$b. The kernel $k(x,x^{'})$ can be expanded in the series\\\text{}\\
     $k(x,x^{'}) = \sum_{j=1}{\lambda_{i}\varphi_{i}(x)\varphi_{i}(x^{i})}$\\\text{}\\
     with positive coefficients $\lambda_{i}>0$ for all i.\\
-    For this expression to be valid and for it to converge absolutely and uniformly, it is necessary and sufficient that the condition \\
+    For this expression to be valid and for it to converge absolutely and uniformly, it is necessary and sufficient that the condition \\\text{}\\
     
     $\int_{b}^{a}\int_{b}^{a}k(x,x^{'}) \varphi(x)\varphi(x^{'})dxdx^{'} \geq{0}$ \\
     always holds, for all $\varphi{.}$, for\\
@@ -35,41 +35,33 @@ By turning in this assignment, I agree by the academic honor code and declare th
 
 \section*{Problem 2}
 
-\begin{gather*}
-\end{gather*}
+\begin{flushleft}
+    \text{The problem of reconstructing the mapping 𝑓 is said to be well-posed if three conditions are satisfied:}\\\text{}\\
+    \text{1)Existence: For every input vector x $\in$ X, there exists an output $y=f(x)$ where $y\in Y$}\\\text{}\\
+    \text{2)Uniquiness: For any pair of input vectors x, t$\in$X,we have f(x)=f(t) iff x=t}\\\text{}\\
+    \text{3)Continuity: The mapping is continuous, that is, for any $\epsilon > 0$ there exists $\delta=\delta(\epsilon)$ such that the}\\\text{ condition $p_{x}(x,t)<\delta$ implies $p_{y}((f(x),f(t)) < \epsilon$.}\\\text{}\\
+    \text{If any of these aren't satisfied, the problem is said to be ill-posed.}
+\end{flushleft}
 
 \section*{Problem 3}
-\begin{gather*}
-    \Delta w_{ji}(n) = \alpha \Delta w_{ji}(n-1) + \eta\delta_j(n)y_i(n)\\\\
-    \text{Put n=2}\\
-\end{gather*}
-\begin{align*}
-    \Delta w_{ji}(2) &= \alpha \Delta w_{ji}(1) + \eta\delta_j(2)y_i(2)\\\\
-    &=\alpha[\alpha\Delta w_{ji}(0)+\eta\delta_j(1)y_i(1)]+ \eta\delta_j(2)y_i(2)\\\\
-    &=\alpha^2\Delta w_{ji}(0)+\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ \\
-    &=\alpha^2[\alpha\Delta_{ji}(-1)+\eta\delta_j(0)y_i(0)]+\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ \\
-    &=\alpha^2\eta\delta_j(0)y_i(0) +\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ 
-\end{align*}
-\[  
-    \text{The above equation can also be generalized in the following way}\\
-\]
-\begin{gather*}
-    \Delta w_{ji}(n) = \eta\sum_{t=0}^{N}\alpha^{n-t}\delta_j(t)y_i(t)
-\end{gather*}
+\begin{flushleft} 
+    \text{a) If the primal problem has an optimal solution, the dual problem also has an optimal solution,}\\\text{ and the corresponding optimal values are equal.}\\\text{}\\
+    \text{b) In order for $w_{0}$ to be an optimal primal solution and $\alpha_{0}$ to be an optimal dual solution, it is}\\\text{ necessary and sufficient that $w_{0}$ is feasible for the primal problem, and $\varphi(w_{0}) = J(w_{0}, b_{0}, a_{0})$}
+\end{flushleft}
 
 \section*{Problem 4}
 \begin{flushleft}
-    \text{1)An RBFN must have only 1 hidden layer}\\
-    \text{2)Argument of the activation function of each hidden neuron in RBFN computes the Euclidean norm} \\\text{between the input vector and the center of that unit, but in MLP it computes the inner product}\\\text{ of the input vector and synaptic weight vector of that unit.}\\
+    \text{1)An RBFN must have only 1 hidden layer}\\\text{}\\
+    \text{2)Argument of the activation function of each hidden neuron in RBFN computes the Euclidean norm} \\\text{between the input vector and the center of that unit, but in MLP it computes the inner product}\\\text{ of the input vector and synaptic weight vector of that unit.}\\\text{}\\
     \text{3)Computational nodes of an MLP, located in a hidden layer or an output layer, share a common }\\\text{neuronal model, unlike in RBFN having a different neuronal model.}
 \end{flushleft}
 
 \section*{Problem 5}
 \begin{flushleft}
-    \text{We know how to find the optimal hyperplane for nonseparating patterns.}\\
+    \text{We know how to find the optimal hyperplane for nonseparating patterns.}\\\text{}\\
     \text{For SVM, we need to do:}\\\text{}
     \text{1.nonlinear mapping of input vector into a high-dimensional feature space that is}\\
-    \text{hidden from both the input and output.}\\
+    \text{hidden from both the input and output.}\\\text{}\\
     \text{2.The construction of an optimal hyperplane for separating the features discovered in step 1.}
 \end{flushleft}
 \end{document}
