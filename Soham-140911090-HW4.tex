@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage,enumerate,amsmath,amssymb,graphicx}
+\begin{document}
+
+\begin{center}
+{\Large ICT 4012 Spring 2017 Homework [3]} %For example: Homework 1
+
+\begin{tabular}{rl}
+MU Registration No.: & [140911090] \\  % Enter your MU Registration 
+Name: & [Soham Dongargaonkar] \\   % Enter your full name
+%Collaborators: & [list all the people you worked with (if permitted)] % Only if permitted by the teacher, other just comment this line
+\end{tabular}
+\end{center}
+
+%==============Do not change this statement===================================================================
+By turning in this assignment, I agree by the academic honor code and declare that all of this is my own work.
+%=============================================================================================================
+
+\section*{Problem 1}
+
+\begin{center}
+    {(i) A complex problem cast in a high dimensional space non linearly has a higher probability of being linearly separable than compared to a low dimensional space.\\ 
+    \text{}\\
+    (ii) Let ${\{x_i \}}_{i=1}^{N}$ be a set of distinct set of points in $R^{m_{0}}$. The NxN interpolation matrix $\Phi$ (with ji-th element $\varphi_{ji}=\varphi(||x_j-x_i||)$) is non singular.}\\\text{}\\
+    (iii)Let $k(x,x^{'})$ be a continous summetric kernel that is defined in the closed interval \\a $\leq$x$ \leq$b. The kernel $k(x,x^{'})$ can be expanded in the series\\\text{}\\
+    $k(x,x^{'}) = \sum_{j=1}{\lambda_{i}\varphi_{i}(x)\varphi_{i}(x^{i})}$\\\text{}\\
+    with positive coefficients $\lambda_{i}>0$ for all i.\\
+    For this expression to be valid and for it to converge absolutely and uniformly, it is necessary and sufficient that the condition \\
+    
+    $\int_{b}^{a}\int_{b}^{a}k(x,x^{'}) \varphi(x)\varphi(x^{'})dxdx^{'} \geq{0}$ \\
+    always holds, for all $\varphi{.}$, for\\
+    $\int_{b}^{a}\varphi^{2}(x)dx < \infty$
+    
+\end{center}
+
+\section*{Problem 2}
+
+\begin{gather*}
+\end{gather*}
+
+\section*{Problem 3}
+\begin{gather*}
+    \Delta w_{ji}(n) = \alpha \Delta w_{ji}(n-1) + \eta\delta_j(n)y_i(n)\\\\
+    \text{Put n=2}\\
+\end{gather*}
+\begin{align*}
+    \Delta w_{ji}(2) &= \alpha \Delta w_{ji}(1) + \eta\delta_j(2)y_i(2)\\\\
+    &=\alpha[\alpha\Delta w_{ji}(0)+\eta\delta_j(1)y_i(1)]+ \eta\delta_j(2)y_i(2)\\\\
+    &=\alpha^2\Delta w_{ji}(0)+\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ \\
+    &=\alpha^2[\alpha\Delta_{ji}(-1)+\eta\delta_j(0)y_i(0)]+\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ \\
+    &=\alpha^2\eta\delta_j(0)y_i(0) +\alpha\eta\Delta w_j(1)y_i(1)+ \eta\delta_j(2)y_i(2)\\ 
+\end{align*}
+\[  
+    \text{The above equation can also be generalized in the following way}\\
+\]
+\begin{gather*}
+    \Delta w_{ji}(n) = \eta\sum_{t=0}^{N}\alpha^{n-t}\delta_j(t)y_i(t)
+\end{gather*}
+
+\section*{Problem 4}
+\begin{flushleft}
+    \text{1)An RBFN must have only 1 hidden layer}\\
+    \text{2)Argument of the activation function of each hidden neuron in RBFN computes the Euclidean norm} \\\text{between the input vector and the center of that unit, but in MLP it computes the inner product}\\\text{ of the input vector and synaptic weight vector of that unit.}\\
+    \text{3)Computational nodes of an MLP, located in a hidden layer or an output layer, share a common }\\\text{neuronal model, unlike in RBFN having a different neuronal model.}
+\end{flushleft}
+
+\section*{Problem 5}
+\begin{flushleft}
+    \text{We know how to find the optimal hyperplane for nonseparating patterns.}\\
+    \text{For SVM, we need to do:}\\\text{}
+    \text{1.nonlinear mapping of input vector into a high-dimensional feature space that is}\\
+    \text{hidden from both the input and output.}\\
+    \text{2.The construction of an optimal hyperplane for separating the features discovered in step 1.}
+\end{flushleft}
+\end{document}
